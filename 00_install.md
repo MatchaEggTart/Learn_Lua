@@ -6,7 +6,7 @@
 
   * 安装指令
 
-    ``` shell
+    ``` sh
     cd ~/Downloads
     sudo su
     curl -R -O http://www.lua.org/ftp/lua-5.4.4.tar.gz
