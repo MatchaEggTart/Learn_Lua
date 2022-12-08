@@ -15,13 +15,22 @@
 
 * 如何使 脚本文件变成系统指令
   * HOW
+    * 首先要看 lua 在那
+
+      ``` sh
+      whereis lua
+      ```
+
+    * 一般 在 /usr/local/bin/lua 或者 /usr/local/lua
+
     * 在脚本文件开头输入 #!/usr/local/bin/lua
 
   * EXAMPLE
     * test/bin_helloWorld.lua
 
       ``` lua
-      #!/usr/local/bin/lua
+      #!/usr/bin/lua
+      -- #!/usr/local/bin/lua
       print("Hello World!")
       ```
 

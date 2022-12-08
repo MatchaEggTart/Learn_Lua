@@ -1,3 +1,3 @@
-#!/usr/local/bin/lua
-
+#!/usr/bin/lua
+-- #!/usr/local/bin/lua
 print("Hello World!")
