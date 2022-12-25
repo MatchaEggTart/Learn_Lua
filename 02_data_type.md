@@ -36,7 +36,7 @@
     * nil值作比较时需要加双引号（a == "nil"）
   
   * EXAMPLE（删除功能）
-    * test/nil_delete.lua
+    * test/02_nil_delete.lua
 
       ``` lua
       tab1 = { key1 = "val1", key2 = "val2", "val3" }
@@ -50,19 +50,34 @@
       for key, value in pairs(tab1) do
           print(key .. " - " .. value)
       end
+
+      -- 测试 table 类型
+      print("\n\ntest table data type\n")
+      tab2 = { key1 = 'a', key2 = 'b', 'c', 'd' }
+      for key, value in pairs(tab2) do
+          print(key .. " - " .. value)
+      end
       ```
 
       结果
 
       ``` shell
       1 - val3
-      key2 - val2
       key1 - val1
+      key2 - val2
 
       After use nil to delete key1...
 
       1 - val3
       key2 - val2
+
+
+      test table data type
+
+      1 - c
+      2 - d
+      key1 - a
+      key2 - b
       ```
 
 * boolean
@@ -70,7 +85,7 @@
     * boolean 类型只有两个可选值：true（真） 和 false（假），Lua 把 false 和 nil 看作是"假"，其他的都为"真"
 
   * EXAMPLE
-    * test/boolean.lua
+    * test/03_boolean.lua
 
       ``` lua
       print("true 的类型: ", type(true))
@@ -105,7 +120,7 @@
     * Lua 默认只有一种 number 类型 -- double（双精度）类型（默认类型可以修改 luaconf.h 里的定义），以下几种写法都被看作是 number 类型
 
   * EXAMPLE
-    * test/number.lua
+    * test/04_number.lua
 
       ``` lua
       print(type(2))
@@ -127,3 +142,9 @@
       number
       ```
 
+* string
+  * WHAT
+    * 字符串由一对双引号或单引号来表示
+
+  * EXAMPLE
+    * test

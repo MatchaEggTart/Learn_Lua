@@ -31,12 +31,14 @@
     nv helloWorld.lua
     ```
 
-    ``` lua
-    print("Hello World!")
-    ```
+    * test/00_helloWorld.lua
+
+      ``` lua
+      print("Hello World!")
+      ```
 
   * 执行
 
     ``` shell
-    lua helloWorld
+    lua 00_helloWorld
     ```

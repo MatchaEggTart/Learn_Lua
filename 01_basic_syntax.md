@@ -23,10 +23,10 @@
 
     * 一般 在 /usr/local/bin/lua 或者 /usr/local/lua
 
-    * 在脚本文件开头输入 #!/usr/local/bin/lua
+    * 在脚本文件开头输入 #!/usr/local/bin/lua 或者 /usr/local/lua
 
   * EXAMPLE
-    * test/bin_helloWorld.lua
+    * test/01_bin_helloWorld.lua
 
       ``` lua
       #!/usr/bin/lua

@@ -9,3 +9,10 @@ tab1.key1 = nil
 for key, value in pairs(tab1) do
     print(key .. " - " .. value)
 end
+
+-- 测试 table 类型
+print("\n\ntest table data type\n")
+tab2 = { key1 = 'a', key2 = 'b', 'c', 'd' }
+for key, value in pairs(tab2) do
+    print(key .. " - " .. value)
+end
