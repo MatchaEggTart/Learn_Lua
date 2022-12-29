@@ -144,7 +144,78 @@
 
 * string
   * WHAT
-    * 字符串由一对双引号或单引号来表示
+    * 字符串由一对 双引号" " 或 单引号' ' 和 两个 方括号 [[ ]] 来表示
+    * 在对一个数字字符串上进行算术操作时，Lua 会尝试将这个数字字符串转成一个数字
+    * 字符串连接使用的是 ..
+    * 使用 # 来计算字符串的长度，放在字符串前面
 
   * EXAMPLE
-    * test
+    * test/05_string.lua
+
+      ``` lua
+      -- 单引号，双引号，2个方括号 都可以视作字符串
+      string1 = 'this is string1'
+      string2 = "this is string2"
+
+      html = [[
+      <html>
+      <head><head/>
+      <body>
+        <a href="http://www.runoob.com/">菜鸟教程</a>
+      </body>
+      </html>
+      ]]
+
+      print(string1..'\n')
+      print(string2..'\n')
+      print(html..'\n\n')
+
+      -- Lua 会 尝试将 数字字符串 转变成 一个数字
+      print("\"2\" + 6 = " .. "2" + 6)
+      print("\"2\" + \"6\" = " .. "2" + "6")
+      print("\"2 + 6\" = " .. "2 + 6")
+      print("\"-2e2\" * \"6\" = " .. "-2e2" * "6")
+      print("\"error\" + 1\" = " .. "error" + 1)
+
+      -- 字符串连接符号 是 ..
+      a = '1'
+      b = '2'
+      print(a .. '+' .. b .. ' = ' .. a + b)
+
+      -- # 用来计算字符串长度
+      print('sizeof(string1)' .. #string1)
+      print('sizeof(string2)' .. #string2)
+      print('sizeof(html)' .. #html)
+      ```
+
+      结果
+
+      ``` shell
+      this is string1
+
+      this is string2
+
+      <html>
+      <head><head/>
+      <body>
+        <a href="http://www.runoob.com/">菜鸟教程</a>
+      </body>
+      </html>
+
+      "2" + 6 = 8
+      "2" + "6" = 8
+      "2 + 6" = 2 + 6
+      "-2e2" * "6" = -1200.0
+      lua: 05_string.lua:23: attempt to add a 'string' with a 'number'
+      stack traceback:
+              [C]: in metamethod 'add'
+              05_string.lua:23: in main chunk
+              [C]: in ?
+
+      1+2 = 3
+      sizeof(string1)15
+      sizeof(string2)15
+      sizeof(html)96
+      ```
+
+* table
